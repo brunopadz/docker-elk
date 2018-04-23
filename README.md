@@ -1,12 +1,30 @@
-# ELK_Stack running on a docker compose.
+# ELK stack on Docker
+> Fast and easy way to run ELK on Docker
 
-Here we will run a simple demonstration of ELK Stack on a docker-compose.
+## tl;dr
+🔸 Clone it
 
-For that we need to have the docker installed in our computer.
-you can get this on this source.
+🔸 Change domain.com on `docker-compose.yml`
 
-https://www.docker.com/get-docker
+🔸 Add your config
 
-You Just need to clone this repository and run the following command and see it working
+🔸 Run it
 
+
+## Usage
+Clone the repo
+```sh
+git clone https://github.com/brunopadz/docker-elk.git
+```
+
+As it runs jwilder's nginx reverse proxy on top of the stack, you have to change the domain configuration on `docker-compose.yml`
+
+Create a new docker network called proxy (or whatever you want - just make sure to change it on `docker-compose.yml`)
+
+Run it!
+```sh
 docker-compose up
+``` 
+
+### TODO
+* Create examples of how add customized config on ELK like filters and stuff...

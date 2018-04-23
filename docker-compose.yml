@@ -21,7 +21,7 @@ services:
       - node.name=poces
       - cluster.name=elasticsearch
       - discovery.type=single-node
-      - VIRTUAL_HOST=elastic.brunopadz.io
+      - VIRTUAL_HOST=elastic.mydomain.com
       - VIRTUAL_PORT=9200
     ports:
       - "9200:9200"
@@ -51,7 +51,7 @@ services:
     environment:
       - SERVER_NAME=kibana
       - ELASTICSEARCH_URL=http://elasticsearch:9200
-      - VIRTUAL_HOST=kibana.brunopadz.io
+      - VIRTUAL_HOST=kibana.mydomain.com
       - VIRTUAL_PORT=5601
     networks:
       - proxy
